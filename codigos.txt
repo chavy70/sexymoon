@@ -1,0 +1,29 @@
+/backend  (Node.js, Express, Sequelize, etc.)
+/frontend  (React)
+
+set NODE_ENV=development 
+
+Crear las migraciones
+> npx sequelize-cli migration:generate --name create-clients
+> npx sequelize-cli migration:generate --name create-proveedores
+> npx sequelize-cli migration:generate --name create-articulos
+
+Una vez que hayas creado las migraciones, ejecuta este comando para aplicar las migraciones y crear las tablas en la base de datos:
+> npx sequelize-cli db:migrate
+
+Revertir las migraciones: Si las migraciones fallaron o no se aplicaron correctamente, puedes revertirlas y luego volver a intentar aplicarlas:
+
+> npx sequelize-cli db:migrate:undo:all
+Luego, vuelve a ejecutar las migraciones:
+> npx sequelize-cli db:migrate
+
+Statud: Up o Down
+> npx sequelize-cli db:migrate:status
+
+Conectar el Componente de Login al Router
+Si aún no lo has hecho, asegúrate de configurar React Router para poder navegar entre las páginas. Para esto, necesitas instalar react-router-dom:
+> npm install react-router-dom
+
+
+en que archivo agrego esta linea? el JWT?
+const token = localStorage.getItem('token');

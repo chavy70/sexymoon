@@ -1,0 +1,26 @@
+// npx sequelize-cli migration:generate --name create-rolesYpermisos
+module.exports = (sequelize, DataTypes) => {
+  const RolesYpermisos = sequelize.define('RolesYpermisos', {
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
+    rolId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Roles',
+        key: 'id'
+      }
+    },
+    permisoId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Permisos',
+        key: 'id'
+      }
+    }
+  }, { timestamps: false });
+
+  return RolesYpermisos;
+};

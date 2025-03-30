@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Asegúrate de que react-router-dom esté en versión 6
+import Login from './components/Login';
 
 function App() {
   const [mensaje, setMensaje] = useState('');
@@ -10,10 +12,13 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <h1>React + Express</h1>
-      <p>{mensaje}</p>
-    </div>
+    <Router> 
+      <div className="App">
+        <Routes> 
+          <Route path="/" element={<Login />} /> {/* Usamos 'element' para renderizar el componente */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

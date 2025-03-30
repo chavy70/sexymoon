@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts --openssl-legacy-provider start"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,13 @@
   "homepage": "https://github.com/chavy70/sexymoon#readme",
   "description": "",
   "dependencies": {
-    "express": "^4.21.2"
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.14.0",
+    "react-router-dom": "^7.4.1",
+    "sequelize": "^6.37.7"
   },
   "devDependencies": {
     "concurrently": "^6.0.0"

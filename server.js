@@ -1,5 +1,15 @@
 const express = require('express');
+
+const bodyParser = require('body-parser');
+const authRoutes = require('./routes/authRoutes');
 const app = express();
+const cors = require('cors');
+app.use(cors());
+// Middlewares
+app.use(bodyParser.json());
+
+// Rutas
+app.use('/api/auth', authRoutes);
 
 // Ruta de prueba
 app.get('/', (req, res) => {

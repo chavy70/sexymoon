@@ -28,6 +28,32 @@
   color: #61dafb;
 }
 
+.background-stars {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: black; /* Fondo oscuro */
+  overflow: hidden;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.vidrio-empanhado {
+  background: rgb(208 190 209 / 20%); /* Fondo oscuro con opacidad */
+  color: white;
+  padding: 38px;
+  border-radius: 17px;
+  /*z-index: -1;*/ /* Asegúrate de que el fondo esté detrás del contenido */
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

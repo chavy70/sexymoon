@@ -1,5 +1,6 @@
 //  (clientes con credenciales de acceso)
 // npx sequelize-cli migration:generate --name create-usuarios
+
 module.exports = (sequelize, DataTypes) => {
     const Usuarios = sequelize.define('Usuarios', {
       id: {
@@ -34,7 +35,12 @@ module.exports = (sequelize, DataTypes) => {
           model: 'Clientes',
           key: 'id'
         }
-      }
+      },
+    // Agregar el nuevo campo para el Firebase User ID
+    firebaseUserId: {
+      type: DataTypes.STRING,
+      allowNull: true, // Este campo puede ser opcional si no todos los usuarios se autentican con Firebase
+    }
     }, {});
   
     // Definir asociaciones

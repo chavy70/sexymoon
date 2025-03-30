@@ -24,6 +24,9 @@ Conectar el Componente de Login al Router
 Si aún no lo has hecho, asegúrate de configurar React Router para poder navegar entre las páginas. Para esto, necesitas instalar react-router-dom:
 > npm install react-router-dom
 
+Para completar la configuración, agrega este URI de redireccionamiento de OAuth a la configuración de tu app de Facebook
+https://sexymoon-ca5a9.firebaseapp.com/__/auth/handler
 
+Guardar como Hash de 10 las contraseñas
 en que archivo agrego esta linea? el JWT?
 const token = localStorage.getItem('token');
